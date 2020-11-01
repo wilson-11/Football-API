@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="card col s12 m8 offset-m2">
+        <div class="input-field">
+            <select onChange="getMatches(event.target.value)">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1ST_QUALIFYING_ROUND">1st Qualifying Round</option>
+                <option value="2ND_QUALIFYING_ROUND">2nd Qualifying Round</option>
+                <option value="3RD_QUALIFYING_ROUND">3rd Qualifying Round</option>
+                <option value="PLAY_OFF_ROUND">Play Off Round</option>
+                <option value="GROUP_STAGE,1">Group Stage (Matchday 1)</option>
+                <option value="GROUP_STAGE,2">Group Stage (Matchday 2)</option>
+                <option value="GROUP_STAGE,3">Group Stage (Matchday 3)</option>
+                <option value="GROUP_STAGE,4">Group Stage (Matchday 4)</option>
+                <option value="GROUP_STAGE,5">Group Stage (Matchday 5)</option>
+                <option value="GROUP_STAGE,6">Group Stage (Matchday 6)</option>
+                <option value="ROUND_OF_16">Round Of 16</option>
+                <option value="QUARTER_FINALS">Quarter Finals</option>
+                <option value="SEMI_FINALS">Semi Finals</option>
+                <option value="FINAL">Final</option>
+            </select>
+            <label>Stage Select</label>
+        </div>
+    </div>
+</div>
+<div class="row" id="matches">
+</div>
