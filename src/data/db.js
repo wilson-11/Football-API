@@ -1,3 +1,5 @@
+import idb from "idb/lib/idb.js";
+
 let dbPromised = idb.open("football-api", 1, (upgradeDb) => {
 	let teamsObjectStore = upgradeDb.createObjectStore("teams", {
 		keyPath: "id"
@@ -70,3 +72,6 @@ function checkFavoriteTeamById(teamId) {
 			});
 	});
 }
+
+export { saveFavoriteTeam, deleteFavoriteTeam, checkFavoriteTeamById };
+export { getAllFavoriteTeam };

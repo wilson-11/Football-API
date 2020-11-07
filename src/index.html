@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#38B6FF" />
 
-    <link rel="stylesheet" href="css/materialize.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="shortcut icon" href="./icon/maskable_icon-192x192.png" />
-    <link rel="apple-touch-icon" href="./icon/maskable_icon-192x192.png" />
+    <link rel="manifest" href="src/manifest.json" />
+    <link rel="shortcut icon" href="src/icon/maskable_icon-192x192.png" />
+    <link rel="apple-touch-icon" href="src/icon/maskable_icon-192x192.png" />
     <link rel="preconnect" href="https://crests.football-data.org" />
     <link rel="preconnect" href="https://api.football-data.org" />
   </head>
@@ -27,8 +25,7 @@
     </nav>
 
     <div class="container pt-10">
-      <div id="body-content">
-      </div>
+      <div id="body-content"></div>
       <div class="preloader-wrapper big active center-align" id="preloader">
         <div class="spinner-layer spinner-blue-only">
           <div class="circle-clipper left">
@@ -42,11 +39,6 @@
       </div>
     </div>
 
-    <script src="js/materialize.min.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/idb.js"></script>
-    <script src="js/db.js"></script>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
@@ -58,9 +50,10 @@
       }
 
       function registerServiceWorker() {
-        return navigator.serviceWorker.register('./service-worker.js')
+        return navigator.serviceWorker.register('src/service-worker.js')
           .then((registration) => {
             console.log('Registrasi service worker berhasil.');
+            registration.pushManager.subscribe({userVisibleOnly: true});
             return registration;
           })
           .catch((e) => {
