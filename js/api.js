@@ -2,7 +2,7 @@ const base_url = "https://api.football-data.org/v2/";
 
 function status(response) {
 	if (response.status !== 200) {
-		console.log("Error : " + response.status);
+		console.log(`Error : ${response.status}`);
 		return Promise.reject(new Error(response.statusText));
 	} else {
 		return Promise.resolve(response);
@@ -14,7 +14,7 @@ function json(response) {
 }
 
 function error(error) {
-	console.log("Error : " + error);
+	console.log(`Error : ${error}`);
 }
 
 function printTeams(data) {
@@ -251,14 +251,14 @@ function printFavorites(favorites) {
 
 function getTeams() {
 	if ("caches" in window) {
-		caches.match(base_url + "teams").then((response) => {
+		caches.match(`${base_url}teams`).then((response) => {
 			if(response) {
 				response.json().then(printTeams);
 			}
 		});
 	}
 
-	fetch(base_url + "teams", {
+	fetch(`${base_url}teams`, {
 		headers: {
 			"X-Auth-Token": "ab2976308882487387f571c3826fbdfb"
 		},
@@ -274,14 +274,14 @@ function getFavorites() {
 
 function getStandings() {
 	if ("caches" in window) {
-		caches.match(base_url + "competitions/2001/standings?standingType=TOTAL").then((response) => {
+		caches.match(`${base_url}competitions/2001/standings?standingType=TOTAL`).then((response) => {
 			if(response) {
 				response.json().then(printStandings);
 			}
 		});
 	}
 
-	fetch(base_url + "competitions/2001/standings?standingType=TOTAL", {
+	fetch(`${base_url}competitions/2001/standings?standingType=TOTAL`, {
 		headers: {
 			"X-Auth-Token": "ab2976308882487387f571c3826fbdfb"
 		},
@@ -298,14 +298,14 @@ function getMatches(selectedValue) {
 	}
 
 	if ("caches" in window) {
-		caches.match(base_url + "competitions/2001/matches?stage=" + selectedValue + "&matchday=" + matchday).then((response) => {
+		caches.match(`${base_url}competitions/2001/matches?stage=${selectedValue}&matchday=${matchday}`).then((response) => {
 			if(response) {
 				response.json().then(printMatches);
 			}
 		});
 	}
 
-	fetch(base_url + "competitions/2001/matches?stage=" + selectedValue + "&matchday=" + matchday, {
+	fetch(`${base_url}competitions/2001/matches?stage=${selectedValue}&matchday=${matchday}`, {
 		headers: {
 			"X-Auth-Token": "ab2976308882487387f571c3826fbdfb"
 		},
