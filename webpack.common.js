@@ -37,7 +37,7 @@ module.exports = {
 		}),
 		new WorkboxPlugin.InjectManifest({
 			swSrc: "./src/service-worker.js",
-			swDest: "./src/service-worker.js"
+			swDest: "./service-worker.js"
 		}),
 		new CopyPlugin({
 			patterns: [
