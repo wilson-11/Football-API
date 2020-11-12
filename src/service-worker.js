@@ -1,23 +1,5 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js");
 
-self.__WB_MANIFEST = [
-	{ url: "./", revision: "1" },
-	{ url: "./index.html", revision: "1" },
-	{ url: "./pages/match.html", revision: "1" },
-	{ url: "./pages/standing.html", revision: "1" },
-	{ url: "./pages/team.html", revision: "1" },
-	{ url: "./pages/favorite.html", revision: "1" },
-	{ url: "./css/styles.css", revision: "1" },
-	{ url: "./view/nav.js", revision: "1" },
-	{ url: "./data/api.js", revision: "1" },
-	{ url: "./data/db.js", revision: "1" },
-	{ url: "./manifest.json", revision: "1" },
-	{ url: "./icon/maskable_icon-192x192.png", revision: "1" },
-	{ url: "./icon/maskable_icon-512x512.png", revision: "1" },
-	{ url: "https://fonts.googleapis.com/icon?family=Material+Icons", revision: "1" },
-	{ url: "https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2", revision: "1" },
-];
-
 if (workbox) {
 	console.log("Workbox berhasil dimuat");
 } else {

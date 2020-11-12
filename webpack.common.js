@@ -35,10 +35,6 @@ module.exports = {
 			template: "./src/index.html",
 			filename: "index.html"
 		}),
-		new WorkboxPlugin.InjectManifest({
-			swSrc: "./src/service-worker.js",
-			swDest: "./service-worker.js"
-		}),
 		new CopyPlugin({
 			patterns: [
 				{ from: "src/view/pages", to: "src/view/pages" },
@@ -46,5 +42,9 @@ module.exports = {
 				{ from: "src/icon", to: "src/icon" }
 			],
 		}),
+		new WorkboxPlugin.InjectManifest({
+			swSrc: "./src/service-worker.js",
+			swDest: "service-worker.js"
+		})
 	]
 };

@@ -1,8 +1,8 @@
 let webPush = require("web-push");
 
 const vapidKeys = {
-	"publicKey": "BHiRVFdjSSEqYGOjFCzqstrihD6P_uh7_82_Su_H7Apem0IqmggnXEz2NE6arEwQTOu5S9OH7vPqzIs4ras5tVU", 
-	"privateKey": "C-7qmQsDrXXPqwI2Kywo838829drFFChE6-nXckuEXg"
+	"publicKey": "BBhe-v3Twb8jeuJYxPQbcv0BNgcwCcMeX8XLdjkQvZC-Ud0etKt4SmPRER0l_0J5R3HSGueS7fMjUDMbCVOqx7M",
+	"privateKey": "w1o0QHc4HXku5hkwdjO6Gc2DXCXnk57JsJ2obY8B-6M"
 };
 
 webPush.setVapidDetails(
@@ -12,10 +12,10 @@ webPush.setVapidDetails(
 );
 
 let pushSubscription = {
-	"endpoint": "https://fcm.googleapis.com/fcm/send/f98o9rQlGv4:APA91bFt2Ytz0ItJjJcY6jnkFTR4gLecJe3430LqhLMNwRYg3-oPLlhgqRHaAgUwfjp3p-ES5IJUa6dcgQ-6yEJxx5R2gflbby13qrCMoEB6SqxTbv87wrXoINoauwwd7k5g1VxRV998",
+	"endpoint": "https://fcm.googleapis.com/fcm/send/co9KT03ucDQ:APA91bEtspIKirWnZMYArNibglyWRX7dLsdP48nZMM8p86o-dbhxVUV0MxCbEyEPkyzdN4444Wiqed8GE0HBX9Gj5NTzZd5JZwMrlwA0jv7nqu9Bq8kWH55QLl8Ds1KmYFZooHTEaDBR",
 	"keys": {
-		"p256dh": "BJ2hwZ3PaI6EFHUTKdg9IO3eG1GB70xxvJ1u3Q30nrBObnOm8d7XItRjeEVMW7loSsOrhCiDMqcnKBt1TCiWad8=", 
-		"auth": "bsu7PrRTjf5ezMAtxTFz+w=="
+		"p256dh": "BN6ZzdSxFH80Zh9vHMMblkL6lwNXqCoYFUTW7c7IRH6sTEeVETKI3qwCu+Y1+MUhB1PwgdSDpoP7hhVcZIdi4Us=",
+		"auth": "fuT2pLQiFg73WJrTYHd6cg=="
 	}
 };
 
