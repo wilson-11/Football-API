@@ -10,7 +10,9 @@ function printTeams(data) {
 		`;
 	} else {
 		data.teams.forEach((team) => {
-			team.crestUrl = team.crestUrl.replace(/^http:\/\//i, "https://");
+			if (team.crestUrl) {
+				team.crestUrl = team.crestUrl.replace(/^http:\/\//i, "https://");
+			}
 			let teamElement = document.createElement("div");
 			checkFavoriteTeamById(team.id).then((isTeamFavorite) => {
 				team.favorite = isTeamFavorite;
@@ -90,15 +92,17 @@ function printStandings(data) {
 		section.table.forEach((standing) => {
 			let rowElement = document.createElement("tr");
 			let form = "";
-			standing.form.split(",").forEach((status) => {
-				if(status === "W") {
-					form += "<i class=\"material-icons\">flag</i>";
-				} else if(status === "L") {
-					form += "<i class=\"material-icons\">clear</i>";
-				} else {
-					form += "<i class=\"material-icons\">drag_handle</i>";
-				}
-			});
+			if (standing.form) {
+				standing.form.split(",").forEach((status) => {
+					if(status === "W") {
+						form += "<i class=\"material-icons\">flag</i>";
+					} else if(status === "L") {
+						form += "<i class=\"material-icons\">clear</i>";
+					} else {
+						form += "<i class=\"material-icons\">drag_handle</i>";
+					}
+				});
+			}
 			rowElement.innerHTML = `
 			  <td>${standing.team.name}</td>
 			  <td>${standing.playedGames}</td>
