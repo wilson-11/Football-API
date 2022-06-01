@@ -15,7 +15,7 @@ https://www.football-data.org
 
 <br>
 <p align="center">
-  <img src="docs/1.gif">
-  <img src="docs/2.gif">
+  <img src="docs/1.gif" width="20%">
+  <img src="docs/2.gif" width="20%">
 </p>
 <br>
