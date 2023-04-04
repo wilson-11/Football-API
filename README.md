@@ -1,4 +1,4 @@
-## Football PWA
+## UEFA Football
 Progressive Web App about UEFA Champion League built using JS, Webpack, IndexedDB, Workbox, and Firebase Cloud Messaging.
 
 ## Features
